@@ -4,12 +4,12 @@
         <!-- En-tête de la page -->
         <meta charset="utf-8" />
         <link rel="stylesheet" href="headercss.css" />
-        <title>PEZPAL</title>
+        <title>myPEZ</title>
     </head>
 
     <body>
         <img src="header_image.jpg" alt="photodepez" />
-    	<balise1> PEZPAL </balise1> 
+    	<balise1> myPEZ </balise1> 
     	<balise2> ça pez ! </balise2>
 
         <balise4> 
@@ -36,6 +36,7 @@
 
 
     
+
     	
         
 
