@@ -1,27 +1,12 @@
-.navBar{
-    list-style:none;
-    text-align:center;
-
-}
-.navBar li{
-    display:inline;
-}
-.navBar a{
-    display:inline-block;
-    padding:10px;
-    text-decoration: none;
-    font-family: "PantonW01-Heavy";
+.presentationTxt{
+    font-family:    "PantonW01-Heavy";
+    font-style: italic;
     color:white;
-}
-
-#headerTitle{
-    font-size: 35px;
-}
-
-.titleCategory{
-    font-size: 18px;
-}
-
-body{
-    background: url("../Image/wallpaper.jpg") top no-repeat;
+    text-align: center;
+    position:absolute;
+    left: 50%;
+    top:60%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 50px;
+    text-shadow: 1px 1px 1px black;
 }

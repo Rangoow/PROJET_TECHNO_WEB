@@ -1,11 +1,17 @@
 <header>
-<ul class="navBar">
-<li><a class="titleCategory" style="float:left" href="/">SIGN IN</a></li>
-  <li><a class="titleCategory" href="">PRODUCTS</a></li>
-  <li><a class="titleCategory" href="">SEARCH</a></li>
-  <li><a id="headerTitle" href="">MyPez</a></li>
-  <li><a class="titleCategory" href="">CART</a></li>
-  <li><a class="titleCategory" href="">CREDITS</a></li>
-  <li><a class="titleCategory" style="float:right" href="">LOGIN</a></li>
-</ul>
-</header>
+<div class="navBar">
+    <a id="headerTitle" href="main.php">MyChiliPepper</a>
+    <a class="titleCategory" href="productPage">PRODUCTS</a>
+    <a class="titleCategory" href="searchPage">SEARCH</a>
+    <a class="titleCategory" href="cartPage.php">CART</a>
+    <div class="login-container">
+      <form action="#">
+        <input type="text" placeholder="Username" name="username">
+        <input type="text" placeholder="Password" name="psw">
+        
+        <button class="titleCategory"  href="createAccountPage.php">SIGN IN</button>
+        <button class="titleCategory"  href="">LOGIN</button>
+      </form>
+    </div>
+</div>
+</header> 

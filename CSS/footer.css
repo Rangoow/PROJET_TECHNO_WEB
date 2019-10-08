@@ -1,0 +1,12 @@
+.footerNav{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:15px 30px 15px 30px;
+    color:white;
+    bottom:0;
+    position:absolute;
+    background-color: #17151A;
+    font-size: 15px;
+}
