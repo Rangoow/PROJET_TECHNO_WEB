@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyPez</title>
     <link rel="stylesheet" href="CSS\main.css">
+    <link rel="stylesheet" href="CSS\common.css">
 </head>
 <body>
     <?php include 'header.php'?>

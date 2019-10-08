@@ -1,32 +1,25 @@
-header{
-    background: url(http://images1.fanpop.com/images/photos/1400000/PEZheads-The-Movie-pez-1486252-1024-768.jpg) no-repeat  fixed;
-    width: 100%;
-    padding-bottom: 5px;
-    background-size: cover;
+.navBar{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
     text-align:center;
+    background: black;
+}
+.navBar li{
+    display:inline;
+}
+.navBar a{
+    display:inline-block;
+    padding:10px;
+    text-decoration: none;
+    font-family: "PantonW01-Heavy";
+    color:white;
 }
 
 #headerTitle{
-    text-decoration:none;
-    font-size:50px;
-    color:white;
-    font-weight:bold;
-    text-shadow:2px 2px 2px black;   
+    font-size: 35px;
 }
 
-nav{
-    text-align:left;
-}
-
-.menuCategory{
-    display:inline-block;
-    padding: 5px 10px;
-}
-
-.menuCategoryTitle{
-    text-decoration:none;
-    color:white;
-    text-shadow:1px 1px 1px black;
-    font-size:18px;
-    position:relative; 
+.titleCategory{
+    font-size: 18px;
 }
