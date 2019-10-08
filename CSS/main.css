@@ -1,9 +1,7 @@
 .navBar{
-    border:1px solid #ccc;
-    border-width:1px 0;
     list-style:none;
     text-align:center;
-    background: black;
+
 }
 .navBar li{
     display:inline;
@@ -22,4 +20,8 @@
 
 .titleCategory{
     font-size: 18px;
+}
+
+body{
+    background: url("../Image/wallpaper.jpg") top no-repeat;
 }
