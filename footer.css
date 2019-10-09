@@ -1,0 +1,14 @@
+.sociaux
+{
+	text-align:  center;
+}
+
+footer
+{
+	background-color: rgb(120,120,120);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
