@@ -1,6 +1,15 @@
+html{
+    height: 100%;
+}
 body{
-    background: url("../Image/pageWallpaper.jpg") bottom no-repeat;
+    background: url("../Image/pageWallpaper.jpg") bottom no-repeat ;
+    background-size: cover;
     font-family: "PantonW01-Heavy";
+    height: 100%;
+}
+
+header{
+    overflow:auto;
 }
 
 .navBar a{
