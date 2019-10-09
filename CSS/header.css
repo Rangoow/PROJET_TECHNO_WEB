@@ -1,11 +1,11 @@
-html{
-    height: 100%;
-}
-body{
+
+body,html{
     background: url("../Image/pageWallpaper.jpg") bottom no-repeat ;
     background-size: cover;
     font-family: "PantonW01-Heavy";
     height: 100%;
+    width:100%;
+    display: table;
 }
 
 header{
@@ -47,7 +47,6 @@ input{
 }
 
 button{
-    float:right;
     padding: 5px 10px;
     margin-top: 15px;
     margin-right: 20px;
@@ -57,7 +56,7 @@ button{
     font-weight:bold;
     border:none;
     cursor: pointer;
-    border-radius: 5px ;
+    border-radius: 5px;
     text-shadow: 1px 1px 1px black;
 }
 

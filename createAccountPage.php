@@ -11,12 +11,30 @@
 </head>
 <body>
     <?php include 'header.php'?>
-    <form action="#">
-        <div>login</div>
-        <label for="">coucou</label>
-        <input type="text">
+    <section>
+    <form action="action_page.php">
+        <div class="container">
+            <label for="login"><b>Login</b></label>
+            <input class="registerFields" type="text" placeholder="Login" name="Login" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input class="registerFields" type="password" placeholder="Password" name="Psw" required>
+
+            <label for="first-name"><b>First name</b></label>
+            <input class="registerFields" type="text" placeholder="First name" name="First-name" required>
+
+            <label for="last-name"><b>Repeat Password</b></label>
+            <input class="registerFields" type="text" placeholder="Last name" name="Last-name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input class="registerFields" type="text" placeholder="Email" name="Email" required>
+
+            <div class="registerbtnContainer">
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+        </div>
     </form>
-    
+    </section>
     <?php include 'footer.php'?>
 </body>
 </html>

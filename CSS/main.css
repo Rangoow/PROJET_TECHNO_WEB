@@ -11,6 +11,44 @@
     text-shadow: 1px 1px 1px black;
 }
 
-.containerFormSignUp{
-    display:flex;
-}
+/* Add padding to containers */
+.container {
+    padding: 16px;
+  }
+  
+  /* Full-width input fields */
+  .registerFields[type=text], .registerFields[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .registerFields[type=text]:focus, .registerFields[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+  }
+
+  label{
+      color:white;
+      font-family: arial;
+      text-shadow: 2px 2px 2px #AA1E1E;
+      font-size: 18px;
+  }
+
+  .registerbtnContainer{
+      text-align: center;
+  }
