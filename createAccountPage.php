@@ -10,8 +10,21 @@
     <link rel="stylesheet" href="CSS\main.css">
 </head>
 <body>
-    <?php include 'header.php'?>
-    <div class="presentationTxt">Chilli Pepper lover here is your paradise !</div>
+    <section>
+        <?php include 'header.php'?>
+    </section>
+    <section>
+        <div>
+            <form action="main.php">
+                <div class="containerFormSignUp">
+                <label for="inputLogin">Login</label>
+                <div>
+                    <input type="text" id="inputLogin" nmae="login" class="inputBox" placeholder="login">
+                </div>
+                </div>
+            </form>
+        </div>
+    </section>
     <?php include 'footer.php'?>
 </body>
 </html>
