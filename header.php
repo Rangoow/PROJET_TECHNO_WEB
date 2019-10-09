@@ -1,8 +1,8 @@
 <header>
 <div class="navBar">
     <a id="headerTitle" href="main.php">MyChiliPepper</a>
-    <a class="titleCategory" href="productPage">PRODUCTS</a>
-    <a class="titleCategory" href="searchPage">SEARCH</a>
+    <a class="titleCategory" href="productPage.php">PRODUCTS</a>
+    <a class="titleCategory" href="searchPage.php">SEARCH</a>
     <a class="titleCategory" href="cartPage.php">CART</a>
     <div class="login-container">
       <form action="#">
