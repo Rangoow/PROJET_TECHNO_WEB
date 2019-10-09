@@ -11,7 +11,64 @@
 </head>
 <body>
     <?php include 'header.php'?>
-    <div class="presentationTxt">Chilli Pepper lover here is your paradise !</div>
+    <section class="productContainer"> 
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <span class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    <div class="product-card">
+        <div ><img class="productimage" src="https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Carolina-Reaper-Pepper.jpg"></div>   
+        <div class="productinfo">
+            <h5>Carolina Reaper</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+    </section>
     <?php include 'footer.php'?>
 </body>
 </html>

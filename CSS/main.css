@@ -52,3 +52,27 @@
   .registerbtnContainer{
       text-align: center;
   }
+
+  .productimage {
+	width: 150px;
+}
+
+.productcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card{
+    padding: 4%;
+    flex-grow: 1;
+    flex-basis: 16%;
+    display: flex;
+}
+
+.productinfo{
+    padding-left: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px #AA1E1E;
+    font-size: 25px;
+}
