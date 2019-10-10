@@ -1,5 +1,11 @@
+@font-face{
+  font-family: "Pepper";
+src: url("../Font/Panton\ W01\ Heavy.ttf");
+}
+
+
 .presentationTxt{
-    font-family:    "PantonW01-Heavy";
+    font-family:    "Pepper";
     font-style: italic;
     color:white;
     text-align: center;
@@ -54,7 +60,8 @@
   }
 
   .productimage {
-	width: 150px;
+  width: 145px;
+  height: 200px;
 }
 
 .productcontainer{
@@ -66,7 +73,7 @@
 .product-card{
     padding: 4%;
     flex-grow: 1;
-    flex-basis: 16%;
+    flex-basis: 15%;
     display: flex;
 }
 
@@ -75,4 +82,19 @@
     color: white;
     text-shadow: 1px 1px 1px #AA1E1E;
     font-size: 25px;
+}
+
+
+.addtocartBtn{
+  padding: 5px 10px;
+  margin-top: 15px;
+  margin-right: 20px;
+  background:rgb(170, 30, 30);
+  color: #fff;
+  font-size: 18px;
+  font-weight:bold;
+  border:none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px black;
 }
