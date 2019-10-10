@@ -11,7 +11,9 @@
 </head>
 <body>
     <?php include 'header.php'?>
-    <div class="presentationTxt">Chilli Pepper lover here is your paradise !</div>
+        <label for="site-search">Search on the site : </label>
+        <input type="search" id="site-search" name="q">
+        <button>Search</button>
     <?php include 'footer.php'?>
 </body>
 </html>

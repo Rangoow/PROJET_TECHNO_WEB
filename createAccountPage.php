@@ -23,7 +23,7 @@
             <label for="first-name"><b>First name</b></label>
             <input class="registerFields" type="text" placeholder="First name" name="First-name" required>
 
-            <label for="last-name"><b>Repeat Password</b></label>
+            <label for="last-name"><b>Last name</b></label>
             <input class="registerFields" type="text" placeholder="Last name" name="Last-name" required>
 
             <label for="email"><b>Email</b></label>
