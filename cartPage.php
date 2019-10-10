@@ -11,7 +11,15 @@
 </head>
 <body>
     <?php include 'header.php'?>
-    <div class="presentationTxt">Chilli Pepper lover here is your paradise !</div>
+    <section class="cartcontainer">
+        <h1>Your cart :</h1>
+        <div class="cartcontent">
+            <div>elem1</div>
+            <div>elem2</div>
+            <div>elem3</div>
+            <div>elem4</div>
+        </div>
+    </section>
     <?php include 'footer.php'?>
 </body>
 </html>

@@ -5,7 +5,7 @@ src: url("../Font/Panton\ W01\ Heavy.ttf");
 
 
 .presentationTxt{
-    font-family:    "Pepper";
+    font-family:"Pepper";
     font-style: italic;
     color:white;
     text-align: center;
@@ -98,3 +98,14 @@ src: url("../Font/Panton\ W01\ Heavy.ttf");
   border-radius: 5px;
   text-shadow: 1px 1px 1px black;
 }
+
+
+.cartcontainer{
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.cartcontent{
+  border:solid rgb(170, 30, 30);
+}
+
