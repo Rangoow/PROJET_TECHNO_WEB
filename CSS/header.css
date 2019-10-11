@@ -2,7 +2,7 @@
 body,html{
     background: url("../Image/pageWallpaper.jpg") bottom no-repeat ;
     background-size: cover;
-    font-family: "PantonW01-Heavy";
+    font-family: "Pepper";
     height: 100%;
     width:100%;
     display: table;
@@ -75,7 +75,3 @@ button:hover{
         padding: 14px;
     }
 }
-
-
-
-
