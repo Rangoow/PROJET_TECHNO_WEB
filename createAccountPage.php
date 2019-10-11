@@ -17,14 +17,20 @@
             <label for="login"><b>Login</b></label>
             <input class="registerFields" type="text" placeholder="Login" name="Login" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input class="registerFields" type="password" placeholder="Password" name="Psw" required>
+            <label for="password"><b>Password</b></label>
+            <input class="registerFields" type="password" placeholder="Password" name="Password" required>
 
             <label for="first-name"><b>First name</b></label>
             <input class="registerFields" type="text" placeholder="First name" name="First-name" required>
 
             <label for="last-name"><b>Last name</b></label>
             <input class="registerFields" type="text" placeholder="Last name" name="Last-name" required>
+
+            <label for="last-name"><b>Adress</b></label>
+            <input class="registerFields" type="text" placeholder="Adress" name="Adress" required>
+
+            <label for="city"><b>City</b></label>
+            <input class="registerFields" type="text" placeholder="City" name="City" required>
 
             <label for="email"><b>Email</b></label>
             <input class="registerFields" type="text" placeholder="Email" name="Email" required>
