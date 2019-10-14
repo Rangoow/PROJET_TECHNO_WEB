@@ -1,45 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- En-tête de la page -->
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="headercss.css" />
-        <title>myPEZ</title>
-    </head>
+<header>
+  <?php $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web','root',''); ?>
+<div class="navBar">
+    <a id="headerTitle" href="main.php">MyChiliPepper</a>
+    <a class="titleCategory" href="productPage.php">PRODUCTS</a>
+    <a class="titleCategory" href="searchPage.php">SEARCH</a>
+    <a class="titleCategory" href="cartPage.php">CART</a>
+ 
+    <div class="log-container">
+      <form action="#">
+        <input type="text" placeholder="Username" name="Username">
+        <input type="Password" placeholder="Password" name="Password">
+        <button class="titleCategory"  href="main.php">LOGIN</button>
+      </form>
+    </div>
+    <div class="log-container">
+      <form action="createAccountPage.php">
+        <button class="titleCategory" >SIGN UP</button>
+      </form>
+    </div>
+</div>
+</header> 
 
-    <body>
-        <img src="header_image.jpg" alt="photodepez" />
-    	<balise1> myPEZ </balise1> 
-    	<balise2> ça pez ! </balise2>
-
-        <balise4> 
-         <a class="lien" href="productpage.php"> Nos Produits en vente</a> 
-         <a class="lien" href="searchpage.php"> | Rechercher un produit</a>
-        <balise4/>
-
-
-        <balise3>
-        <form method="post" action="productpage.php" >
-            <label for="nom">Pseudo ? : </label>
-            <input type="text" name="pseudo" id="pseudo"><br><br>
-
-            <label for="age">Mot de Passe ? :</label>
-            <input type="password" name="pseudo" id="pseudo"><br><br>
-        
-
-            <input type="submit" value="Connexion"/>
-          </form>
-
-        <balise3/>
-
-
-
-
-    
-
-    	
-        
-
-        
-    </body>
-</html>

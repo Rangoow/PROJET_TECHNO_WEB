@@ -1,0 +1,124 @@
+@font-face{
+  font-family: "Pepper";
+src: url("../Font/Panton\ W01\ Heavy.ttf");
+}
+
+
+.presentationTxt{
+  font-family:"Pepper";
+  font-style: italic;
+  color:white;
+  text-align: center;
+  position:absolute;
+  left: 50%;
+  top:55%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 35px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.container {
+  padding: 16px;
+}
+  
+
+.registerFields[type=text], .registerFields[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+  
+.registerFields[type=text]:focus, .registerFields[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+  
+  
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+label{
+  color:white;
+  font-family: arial;
+  text-shadow: 2px 2px 2px #AA1E1E;
+  font-size: 18px;
+}
+
+.registerbtnContainer{
+  text-align: center;
+}
+
+.productimage {
+  width: 145px;
+  height: 200px;
+}
+
+.productcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-card{
+  padding: 4%;
+  flex-grow: 1;
+  flex-basis: 15%;
+  display: flex;
+}
+
+.productinfo{
+  padding-left: 10px;
+  color: white;
+  text-shadow: 1px 1px 1px #AA1E1E;
+  font-size: 25px;
+}
+
+
+.addtocartBtn{
+  padding: 5px 10px;
+  margin-top: 15px;
+  margin-right: 20px;
+  background:rgb(170, 30, 30);
+  color: #fff;
+  font-size: 18px;
+  font-weight:bold;
+  border:none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px black;
+}
+
+
+.cartcontainer{
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.cartcontent{
+  border:solid rgb(170, 30, 30);
+}
+
+
+.productdescription{
+  font-size: 14px;
+}
+
+.productName{
+  font-size: 16px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.productPrice{
+  padding-bottom: 10px;
+}
