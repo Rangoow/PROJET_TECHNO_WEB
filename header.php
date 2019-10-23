@@ -1,4 +1,5 @@
 <header>
+  <?php $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web','root',''); ?>
 <div class="navBar">
     <a id="headerTitle" href="main.php">MyChiliPepper</a>
     <a class="titleCategory" href="productPage.php">PRODUCTS</a>
