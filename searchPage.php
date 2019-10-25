@@ -17,12 +17,12 @@ if(isset($_POST['search'])) {
      if($row = $query->fetch() ) {
 
             $xname = $row['name'];
-            echo($xname);
             $xdescription = $row['description'];
             $ximage_produit = $row['image_produit'];
 
-            $output = '<br>'.$xname.'<br>'.$xdescription.'<br>'.$ximage_produit.'<br>';
-            
+            $output = '<br>'.$xname.'<br>'.$xdescription.'<br>';
+            $outputImage=$ximage_produit;
+
         }
 else { $output = "This product doesn't exists"; }
 
@@ -51,6 +51,7 @@ else { $output = "This product doesn't exists"; }
     </form>
 
    <?php echo("$output") ;?>
+   <img src=$outputImage />
 
     <?php include 'footer.php'?>
 </body>
