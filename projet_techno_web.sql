@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 23 Octobre 2019 à 14:21
+-- Généré le :  Ven 25 Octobre 2019 à 23:12
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -19,6 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `projet_techno_web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cart`
+--
+
+CREATE TABLE IF NOT EXISTS `cart` (
+  `id` int(11) DEFAULT NULL,
+  `name` text,
+  `quantity` int(11) DEFAULT NULL,
+  `unit_price` int(11) DEFAULT NULL,
+  `image_produit` text,
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `id_2` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `cart`
+--
+
+INSERT INTO `cart` (`id`, `name`, `quantity`, `unit_price`, `image_produit`) VALUES
+(1, 'coucou', 14, 2, 'Image');
 
 -- --------------------------------------------------------
 

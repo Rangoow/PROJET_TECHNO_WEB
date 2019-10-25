@@ -1,7 +1,40 @@
 <?php
-   $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web','root',''); 
+    session_start();
+    include 'bdd.php';
 
-  ?>
+
+$response = $bdd->query("SELECT * FROM products"); 
+$results = $response->fetchAll();
+
+
+function ajouterArticle()
+{
+    if(isset($_POST["add"]))
+    {
+        {
+        $name = $result['name'];
+        $unit_price = $result['unit_price'];
+        $image_produit = $result['image_produit'];
+        $quantity = $_POST['quantity'];
+        }
+
+
+
+        $req = $bdd->query('INSERT INTO `cart` (`name`, `quantity`, `unit_price`, `image_produit`) 
+            VALUES ($name, $quantity, $unit_price, $image_produit)' );
+
+        $req->execute();
+        // je n'ai pas réussi à inserer dans la base de donnée
+    }
+
+   
+}
+
+?>
+
+
+
+
 
 
 <html lang="fr">
@@ -17,86 +50,27 @@
 </head>
 
 <body>
-
     <?php include 'header.php' ?>
     <section class="productContainer"> 
+        <?php foreach ($results as $result) { ?>
     <div class="product-card">
-        <div ><img class="productimage" src="<?php $reponse = $bdd->query("SELECT image_produit FROM products WHERE id = 2 "); $results = $reponse->fetch();
-                echo $results[0]; ?>"></div>   
+        <div ><img class="productimage" src="<?php echo $result['image_produit'];?>"></div>   
         <div class="productinfo">
             <h5 class="productName">
-                <?php $reponse = $bdd->query("SELECT name FROM products WHERE id = 2 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
+                <?php echo $result['name'];?>
                  </h5>
-            <h6 class="productPrice"> 
-                <?php $reponse = $bdd->query("SELECT unit_price FROM products WHERE id = 2 "); $results = $reponse->fetch();
-                echo $results[0].'€'; ?> </h6>
+            <h6 class="productPrice"> <?php echo $result['unit_price'].'€';?></h6>
             <div class="productDescription">
-                <?php $reponse = $bdd->query("SELECT description FROM products WHERE id = 2 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
+                <?php echo $result['description'];?>
             </div>
-            <button class="addtocartBtn">Add to Cart</button>
+            <form method="post" action="productPage.php">
+            <input type="text" name="quantity" class="form-control" value="1">
+            <input type="submit" name="add" value="Add to Cart" class="addtocartBtn" onclick="ajouterArticle()">
+        </form>
         </div>
     </div>
-    <div class="product-card">
-        <div ><img class="productimage" src="<?php $reponse = $bdd->query("SELECT image_produit FROM products WHERE id = 3 "); $results = $reponse->fetch();
-                echo $results[0]; ?>"></div>   
-        <div class="productinfo">
-            <h5 class="productName">
-                <?php $reponse = $bdd->query("SELECT name FROM products WHERE id = 3 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
-            </h5>
-            <h6 class="productPrice">
-                <?php $reponse = $bdd->query("SELECT unit_price FROM products WHERE id = 3 "); $results = $reponse->fetch();
-                echo $results[0].'€'; ?></h6>
-            <div class="productDescription">
-            <?php $reponse = $bdd->query("SELECT description FROM products WHERE id = 3 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
-             </div>
-            <button onclick="<?php $sql = $bdd->query("INSERT INTO  cart (id,name,unit_price,image_produit) values ('3','Trinidad Moruga','13.99','Image/TrinidadMoruga.jpg' "); ?>" class="addtocartBtn">Add to Cart</button>
+<?php }?>
 
-        </div>
-    </div>
-    <div class="product-card">
-        <div ><img class="productimage" src="<?php $reponse = $bdd->query("SELECT image_produit FROM products WHERE id = 4 "); $results = $reponse->fetch();
-                echo $results[0]; ?>"></div>   
-        <div class="productinfo">
-            <h5 class="productName">
-                <?php $reponse = $bdd->query("SELECT name FROM products WHERE id = 4 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
-            </h5>
-            <h6 class="productPrice">
-                <?php $reponse = $bdd->query("SELECT unit_price FROM products WHERE id = 4 "); $results = $reponse->fetch();
-                echo $results[0].'€'; ?>
-            </h6>
-            <div class="productDescription">
-                <?php $reponse = $bdd->query("SELECT description FROM products WHERE id = 4 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
-            </div>
-            <button class="addtocartBtn">Add to Cart</button>
-
-        </div>
-    </div>
-    <div class="product-card">
-        <div ><img class="productimage" src=" <?php $reponse = $bdd->query("SELECT image_produit FROM products WHERE id = 5 "); $results = $reponse->fetch();
-                echo $results[0]; ?>"></div>   
-        <div class="productinfo">
-            <h5 class="productName">
-                <?php $reponse = $bdd->query("SELECT name FROM products WHERE id = 5 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
-            </h5>
-            <h6 class="productPrice">
-                <?php $reponse = $bdd->query("SELECT unit_price FROM products WHERE id = 5 "); $results = $reponse->fetch();
-                echo $results[0].'€'; ?>
-            </h6>
-            <div class="productDescription">
-                <?php $reponse = $bdd->query("SELECT description FROM products WHERE id = 5 "); $results = $reponse->fetch();
-                echo $results[0]; ?>
-            </div>
-            <button class="addtocartBtn">Add to Cart</button>
-
-        </div>
-    </div>
     </section>
     <?php include 'footer.php' ?>
 </body>

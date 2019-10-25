@@ -1,11 +1,8 @@
 
 <?php
-   $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web','root',''); 
-
-  ?>
-
-<?php
+include 'bdd.php';
 $output='';
+$outputImage='';
 
 if(isset($_POST['search'])) {
     $xsearch = $_POST['search'];
@@ -50,8 +47,8 @@ else { $output = "This product doesn't exists"; }
         <input type="submit" value="Search" />
     </form>
 
-   <?php echo("$output") ;?>
-   <img src=$outputImage />
+   <?php echo($output) ;?>
+   <img src="<?php echo $outputImage ?>" />
 
     <?php include 'footer.php'?>
 </body>
