@@ -1,3 +1,9 @@
+<?php
+   $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web','root',''); 
+
+  ?>
+
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
