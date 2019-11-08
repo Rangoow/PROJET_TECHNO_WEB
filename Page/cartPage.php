@@ -21,13 +21,15 @@
         <div class="cartcontent">
             <div>
                 <?php foreach ($results as $result) { ?>
-                <?php echo $result['name']; ?>
+                <?php echo 'Your Product : '.$result['name']; ?>
                 <br/>
-                <?php echo $result['quantity']; ?>
+                <?php echo 'Your Quantity : '.$result['quantity']; ?>
                 <br/>
-                 <img src="Image/<?php echo $result['image_produit'];?>"/>
+                 <img class="cartproductimage" src="Image/<?php echo $result['image_produit'];?>"/>
                 <br/>
-                <?php echo $result['unit_price']; ?>
+                <?php echo 'Your Product Price : '.$result['unit_price']."€"; ?>
+                <br/>
+                <br/>
 
 
               <?php  } ?>  

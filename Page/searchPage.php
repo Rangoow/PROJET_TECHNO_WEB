@@ -1,6 +1,6 @@
 <?php
 $output='';
-$outputImage='';
+$outputImage='none.png';
 
 if(isset($_POST['search'])) {
     $xsearch = $_POST['search'];

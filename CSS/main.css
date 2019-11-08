@@ -58,10 +58,20 @@ label{
   text-align: center;
 }
 
+
 .productimage {
   width: 145px;
   height: 200px;
   padding-top: 10px;
+
+}
+
+.cartproductimage {
+  width: 145px;
+  height: 200px;
+  padding-top: 10px;
+  padding-left:15px;
+  padding-bottom: 5px;
 
 }
 
