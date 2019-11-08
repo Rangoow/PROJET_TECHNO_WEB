@@ -47,7 +47,7 @@ else { $output = "This product doesn't exists"; }
         <?php echo($output) ;?>
     </div>
     <div class="serachproductimage">
-        <img class="productimage" src="<?php echo $outputImage ?>" />
+        <img class="productimage" src="Image/<?php echo $outputImage ?>" />
     </div>
 </body>
 </html>

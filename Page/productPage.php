@@ -1,5 +1,4 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web;charset=utf8', 'root', '');
 $response = $bdd->query("SELECT * FROM products"); 
 $results = $response->fetchAll();
 ?>
@@ -15,7 +14,6 @@ $results = $response->fetchAll();
     <link rel="stylesheet" href="CSS\footer.css">
     <link rel="stylesheet" href="CSS\main.css">
 </head>
-
 <body>
     <section class="productContainer"> 
         <?php foreach ($results as $result) { ?>
