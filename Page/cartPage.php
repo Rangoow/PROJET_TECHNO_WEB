@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="CSS\main.css">
 </head>
 <body>
-    <?php include 'header.php'?>
     <section class="cartcontainer">
         <h1>Your cart :</h1>
         <div class="cartcontent">
@@ -20,6 +19,5 @@
             <div>elem4</div>
         </div>
     </section>
-    <?php include 'footer.php'?>
 </body>
 </html>

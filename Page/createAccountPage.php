@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="CSS\main.css">
 </head>
 <body>
-    <?php include 'header.php'?>
     <section>
     <form action="action_page.php">
         <div class="container">
@@ -41,6 +40,5 @@
         </div>
     </form>
     </section>
-    <?php include 'footer.php'?>
 </body>
 </html>
