@@ -61,6 +61,8 @@ label{
 .productimage {
   width: 145px;
   height: 200px;
+  padding-top: 10px;
+
 }
 
 .productcontainer{
@@ -121,4 +123,12 @@ label{
 
 .productPrice{
   padding-bottom: 10px;
+}
+
+.searchproductdata{
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 20px;
+  color : white;
+  text-shadow: 1px 1px 1px red;
 }

@@ -21,9 +21,7 @@ if(isset($_POST['search'])) {
             
             $output = '<br>'.$xname.'<br>'.$xdescription.'<br>';?>
 
-            <div>
-            <img class="productimage" src="<?php echo $outputImage=$ximage_produit; ?>">
-            </div>
+
             <?php
 
 
@@ -51,7 +49,13 @@ else { $output = "This product doesn't exists"; }
         <input type="text" name="search" placeholder="Looking for a product ?" />
         <input type="submit" value="Search" />
     </form>
-   <?php echo($output) ;?>
-   <img src="<?php echo $outputImage ?>" />
+    <div class="searchproductdata">
+    <div>
+        <?php echo($output); ?>
+    </div>
+    <div >
+        <img class="productimage" src="<?php echo $outputImage=$ximage_produit; ?>">
+    </div>
+    </div>
 </body>
 </html>
