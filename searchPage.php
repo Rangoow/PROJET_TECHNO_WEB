@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 <?php
 include 'bdd.php';
@@ -30,7 +28,6 @@ else { $output = "This product doesn't exists"; }
 
 ?>
 
->>>>>>> ALAN
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -44,11 +41,6 @@ else { $output = "This product doesn't exists"; }
 </head>
 <body>
     <?php include 'header.php'?>
-<<<<<<< HEAD
-        <label for="site-search">Search on the site : </label>
-        <input type="search" id="site-search" name="q">
-        <button>Search</button>
-=======
 
     <form action="searchPage.php" method="post">
         <input type="text" name="search" placeholder="Looking for a product ?" />
@@ -58,7 +50,6 @@ else { $output = "This product doesn't exists"; }
    <?php echo($output) ;?>
    <img src="<?php echo $outputImage ?>" />
 
->>>>>>> ALAN
     <?php include 'footer.php'?>
 </body>
 </html>

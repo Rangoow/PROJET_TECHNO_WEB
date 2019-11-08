@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-=======
+
 <?php
     session_start();
     include 'bdd.php';
 ?>
 
->>>>>>> ALAN
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -22,9 +21,6 @@
     <section class="cartcontainer">
         <h1>Your cart :</h1>
         <div class="cartcontent">
-<<<<<<< HEAD
-            <div>elem1</div>
-=======
             <div>
                 <?php
 
@@ -34,7 +30,6 @@
 
 
             </div>
->>>>>>> ALAN
             <div>elem2</div>
             <div>elem3</div>
             <div>elem4</div>
