@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 23 Octobre 2019 à 14:21
+-- Généré le :  Ven 08 Novembre 2019 à 20:43
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -19,6 +19,31 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `projet_techno_web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cart`
+--
+
+CREATE TABLE IF NOT EXISTS `cart` (
+  `id` int(11) DEFAULT NULL,
+  `name` text,
+  `quantity` int(11) DEFAULT NULL,
+  `unit_price` float DEFAULT NULL,
+  `image_produit` text,
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `id_2` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `cart`
+--
+
+INSERT INTO `cart` (`id`, `name`, `quantity`, `unit_price`, `image_produit`) VALUES
+(2, 'Carolina Reaper', 0, 14.99, 'CarolinaReaper.jpg'),
+(3, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg'),
+(4, 'Butch Taylor', 1, 12.99, 'ButchTaylor.jpg');
 
 -- --------------------------------------------------------
 
@@ -131,10 +156,10 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `unit_price`, `range_id`, `created_at`, `updated_at`, `image_produit`) VALUES
-(2, 'Carolina Reaper', 'Developed by South Carolina breeder Ed Currie, the pepper is red and gnarled. In 2013, Guinness World Records declared it the hottest chili pepper in the world !', 14.99, 2, '2019-10-11 14:21:26', '2019-10-11 14:21:26', 'Image\\CarolinaReaper.jpg'),
-(3, 'Trinidad Moruga', 'The Trinidad Moruga scorpion is a chili pepper native to the district of Moruga in Trinidad and Tobago. It currently is ranked as the second-spiciest chili in the world !', 13.99, 3, '2019-10-11 14:21:26', '2019-10-11 14:21:26', 'Image\\TrinidadMoruga.jpg'),
-(4, 'Butch Taylor', 'The Trinidad scorpion ''Butch T'' ! A laboratory test conducted in March 2011 measured a specimen at 1,463,700 Scoville heat units, officially ranking it the hottest pepper in the world at that time.\nNot to be confused with Trinidad Moruga scorpion.', 12.99, NULL, '2019-10-11 15:53:45', '2019-10-11 15:53:45', 'Image\\ButchTaylor.jpg'),
-(5, 'Naga Viper', 'Created by an English Farmer Gerald Fowler, the Naga Viper pepper is a hot chili pepper. In 2011, it was recorded as the "World''s Hottest Chili" by the Guinness World Records with a rating of 1,382,118 Scoville Heat Units (SHU), but was surpassed in SHU by several other peppers, such as Pepper X in 2017.', 11.99, NULL, '2019-10-11 16:09:14', '2019-10-11 16:09:14', 'Image\\NagaViper.jpg');
+(2, 'Carolina Reaper', 'Developed by South Carolina breeder Ed Currie, the pepper is red and gnarled. In 2013, Guinness World Records declared it the hottest chili pepper in the world !', 14.99, 2, '2019-10-11 14:21:26', '2019-10-11 14:21:26', 'CarolinaReaper.jpg'),
+(3, 'Trinidad Moruga', 'The Trinidad Moruga scorpion is a chili pepper native to the district of Moruga in Trinidad and Tobago. It currently is ranked as the second-spiciest chili in the world !', 13.99, 3, '2019-10-11 14:21:26', '2019-10-11 14:21:26', 'TrinidadMoruga.jpg'),
+(4, 'Butch Taylor', 'The Trinidad scorpion ''Butch T'' ! A laboratory test conducted in March 2011 measured a specimen at 1,463,700 Scoville heat units, officially ranking it the hottest pepper in the world at that time.\nNot to be confused with Trinidad Moruga scorpion.', 12.99, NULL, '2019-10-11 15:53:45', '2019-10-11 15:53:45', 'ButchTaylor.jpg'),
+(5, 'Naga Viper', 'Created by an English Farmer Gerald Fowler, the Naga Viper pepper is a hot chili pepper. In 2011, it was recorded as the "World''s Hottest Chili" by the Guinness World Records with a rating of 1,382,118 Scoville Heat Units (SHU), but was surpassed in SHU by several other peppers, such as Pepper X in 2017.', 11.99, NULL, '2019-10-11 16:09:14', '2019-10-11 16:09:14', 'NagaViper.jpg');
 
 -- --------------------------------------------------------
 

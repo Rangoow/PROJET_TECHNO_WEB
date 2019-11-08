@@ -1,41 +1,9 @@
 <?php
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web;charset=utf8', 'root', '');
-
-
+$bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web;charset=utf8', 'root', '');
 $response = $bdd->query("SELECT * FROM products"); 
 $results = $response->fetchAll();
-
-
-function ajouterArticle()
-{
-    if(isset($_POST["add"]))
-    {
-        {
-        $name = $result['name'];
-        $unit_price = $result['unit_price'];
-        $image_produit = $result['image_produit'];
-        $quantity = $_POST['quantity'];
-        }
-
-
-
-        $req = $bdd->query('INSERT INTO `cart` (`name`, `quantity`, `unit_price`, `image_produit`) 
-            VALUES ($name, $quantity, $unit_price, $image_produit)' );
-
-        $req->execute();
-        // je n'ai pas réussi à inserer dans la base de donnée
-    }
-
-   
-}
-
 ?>
-
-
-
-
-
-
+ 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -47,11 +15,12 @@ function ajouterArticle()
     <link rel="stylesheet" href="CSS\footer.css">
     <link rel="stylesheet" href="CSS\main.css">
 </head>
+
 <body>
     <section class="productContainer"> 
         <?php foreach ($results as $result) { ?>
     <div class="product-card">
-        <div ><img class="productimage" src="<?php echo $result['image_produit'];?>"></div>   
+        <div ><img class="productimage" src="Image/<?php echo $result['image_produit'];?>"></div>   
         <div class="productinfo">
             <h5 class="productName">
                 <?php echo $result['name'];?>
@@ -60,13 +29,29 @@ function ajouterArticle()
             <div class="productDescription">
                 <?php echo $result['description'];?>
             </div>
-            <form method="post" action="productPage.php">
-            <input type="text" name="quantity" class="form-control" value="1">
-            <input type="submit" name="add" value="Add to Cart" class="addtocartBtn" onclick="ajouterArticle()">
+            <form method="post" action="index.php?page=productPage">
+            <input type="hidden" name="image_produit" value="<?php echo $result['image_produit'];?>">
+            <input type="hidden" name="productprice" value="<?php echo $result['unit_price'].'€';?>">
+            <input type="hidden" name="productname" value="<?php echo $result['name'];?>">
+            <input type="hidden" name="productid" value="<?php echo $result['id'];?>">
+            <input type="number" name="quantity" value="1" >
+            <input type="submit" name="add" value="Add to Cart" class="addtocartBtn">
         </form>
         </div>
     </div>
-<?php }?>
+<?php } ?>
+<?php
+    if( isset($_POST["add"])  )
+    {
+        $id = $_POST['productid'];
+        $name = $_POST['productname'];
+        $productprice = $_POST['productprice'];
+        $quantity = $_POST['quantity'];
+        $image_produit= $_POST['image_produit'];
+        
+        $req = $bdd->exec("INSERT INTO cart ( id, name , quantity, unit_price, image_produit)  VALUES ('".$id."', '".$name."', '".$quantity."', '".$productprice."', '".$image_produit."') " );
+    }
+?>
     </section>
 </body>
 </html>

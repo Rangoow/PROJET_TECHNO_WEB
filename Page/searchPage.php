@@ -1,5 +1,4 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web;charset=utf8', 'root', '');
 $output='';
 $outputImage='';
 
@@ -14,16 +13,10 @@ if(isset($_POST['search'])) {
 
             $xname = $row['name'];
             $xdescription = $row['description'];
-            
-
-            
             $ximage_produit = $row['image_produit'];
-            
-            $output = '<br>'.$xname.'<br>'.$xdescription.'<br>';?>
 
-
-            <?php
-
+            $output = '<br>'.$xname.'<br>'.$xdescription.'<br>';
+            $outputImage=$ximage_produit;
 
         }
 else { $output = "This product doesn't exists"; }
@@ -45,17 +38,16 @@ else { $output = "This product doesn't exists"; }
     <link rel="stylesheet" href="CSS\main.css">
 </head>
 <body>
+
     <form action="index.php?page=searchPage" method="post">
         <input type="text" name="search" placeholder="Looking for a product ?" />
         <input type="submit" value="Search" />
     </form>
-    <div class="searchproductdata">
-    <div>
-        <?php echo($output); ?>
+    <div class="searchproductdesc">
+        <?php echo($output) ;?>
     </div>
-    <div >
-        <img class="productimage" src="<?php echo $outputImage=$ximage_produit; ?>">
-    </div>
+    <div class="serachproductimage">
+        <img class="productimage" src="<?php echo $outputImage ?>" />
     </div>
 </body>
 </html>

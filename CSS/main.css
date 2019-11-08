@@ -132,3 +132,12 @@ label{
   color : white;
   text-shadow: 1px 1px 1px red;
 }
+
+
+.serachproductimage{
+  padding-left: 15px;
+}
+
+.searchproductdesc{
+  padding-left: 10px;
+}
