@@ -102,29 +102,33 @@ else{$page = 'null';}
 switch($page){
     
     case"mainPage":
-    include'Page/main.php';
+	include'View/main_view.php';
     break;
 
 
 	case"productPage":
-	include'Page/productPage.php';
+	include'Action/productPage_action.php';
+	include'View/productPage_view.php';
 	break;
 	
 	case"searchPage":
-	include'Page/searchPage.php';
+	include'Action/searchPage_action.php';
+	include'View/searchPage_view.php';
 	break;
 	
 	case"createAccountPage":
-	include'Page\createAccountPage.php';
+	include'Action/createAccountPage_action.php';
+	include'View/createAccountPage_view.php';
 	break;
 	
 	
 	case"cartPage":
-	include'Page/cartPage.php';
+	include'view/cartPage_view.php';
+
     break;
 	
 	default:
-	include'Page/main.php';
+	include'View/main_view.php';
 	
 }	
     include'Include/footer.php';

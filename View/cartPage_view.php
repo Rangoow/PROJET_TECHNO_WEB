@@ -30,12 +30,9 @@
                 <?php echo 'Your Product Price : '.$result['unit_price']."€"; ?>
                 <br/>
                 <br/>
-
-
               <?php  } ?>  
-
-            </div>        </div>
+            </div>        
+        </div>
     </section>
 </body>
 </html>
-
