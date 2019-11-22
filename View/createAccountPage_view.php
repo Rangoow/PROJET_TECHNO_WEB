@@ -20,7 +20,7 @@
             <label for="password"><b>Password</b></label>
             <input class="registerFields" type="password" placeholder="Password" name="password" required>
 
-            <label for="password"><b>Password Cnfirmation</b></label>
+            <label for="password"><b>Password Confirmation</b></label>
             <input class="registerFields" type="password" placeholder="Password" name="confirmation" required>
 
             <!--
