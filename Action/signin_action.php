@@ -7,7 +7,6 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['password'
                     $requser->execute();
                     $userexist =$requser->rowCount();
                     if ($userexist==1){
-                        echo(var_dump($_GET));
                         $userinfo=$requser->fetch();
                         $_SESSION['id']=$userinfo['id'];
                         $_SESSION['username']=$userinfo['username'];

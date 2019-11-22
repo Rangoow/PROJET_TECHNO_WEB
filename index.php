@@ -64,7 +64,7 @@
  
   <nav>
   	<?php
-		include'Action/signin_action.php';
+	//include'Action/signin_action.php';
 	  include'Include/header.php';
   	?>
          
@@ -104,6 +104,7 @@ switch($page){
     
     case"mainPage":
 	include'View/main_view.php';
+	include'Action/signin_action.php';
     break;
 
 

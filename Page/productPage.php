@@ -46,6 +46,9 @@ $results = $response->fetchAll();
         $productprice = $_POST['productprice'];
         $quantity = $_POST['quantity'];
         $image_produit= $_POST['image_produit'];
+
+        $req2 = $bdd->query("SELECT quantity FROM cart WHERE name LIKE ".$_POST['productname']." ");
+        $rep2 = $req->fetch(); 
         
         $req = $bdd->exec("INSERT INTO cart ( id, name , quantity, unit_price, image_produit)  VALUES ('".$id."', '".$name."', '".$quantity."', '".$productprice."', '".$image_produit."') " );
     }

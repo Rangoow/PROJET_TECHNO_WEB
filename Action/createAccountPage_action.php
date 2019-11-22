@@ -33,7 +33,7 @@ function messageConnect ($results, $data_requette) {
              	  'username' => $_GET['username'],
                   'password' => $_GET['password'],
             	  'email' => $_GET['email']));
-            	  $message = "Inscription terminée, bienvenue sur le site de MyCillipeper"/*, $_GET['pseudo']*/;
+            	  $message = "Inscription terminée, bienvenue sur le site de MyChillipeper"/*, $_GET['pseudo']*/;
     	    	}
 
       	    else{ $message =  "Validation du mot de passe incorrecte";}

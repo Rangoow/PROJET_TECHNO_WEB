@@ -1,7 +1,9 @@
 <?php
+ if (isset($_SESSION['id'])) {
+
  $response= $bdd->query(" SELECT * FROM cart WHERE id_client =".$_SESSION['id']."") or die(mysql_error());
  $results = $response->fetchAll();
-
+}
 ?>
 
 <html lang="fr">
@@ -19,7 +21,7 @@
     <section class="cartcontainer">
         <h1>Your cart :</h1>
         <div class="cartcontent">
-            <div>
+            <div> <?php if (isset($_SESSION['id'])) { ?>
                 <?php foreach ($results as $result) { ?>
                 <?php echo 'Your Product : '.$result['name']; ?>
                 <br/>
@@ -31,7 +33,11 @@
                 <br/>
                 <br/>
                 <button>Remove</button>
-              <?php  } ?>  
+              <?php  }} else {
+
+              echo("Cart only available for client with an account");
+          }
+              ?>
             </div>        
         </div>
     </section>

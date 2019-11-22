@@ -1,7 +1,7 @@
 <header>
 
   <?php $bdd = new PDO('mysql:host=localhost;dbname=projet_techno_web','root','');
-    include'Action/signin_action.php';
+    //include'Action/signin_action.php';
   ?>
 <div class="navBar">
     <a id="headerTitle" href="index.php?page=mainPage">MyChiliPepper</a>
