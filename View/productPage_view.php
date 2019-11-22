@@ -28,7 +28,13 @@
                 <input type="hidden" name="productname" value="<?php echo $result['name'];?>">
                 <input type="hidden" name="productid" value="<?php echo $result['id'];?>">
                 <input type="number" name="quantity" value="1" >
+                </br>
+                <?php
+                if (isset($_SESSION['username'])){?>
                 <input type="submit" name="add" value="Add to Cart" class="addtocartBtn">
+                
+                <?php } else {
+                    echo('You should be connected !');}?>
             </form>
             </div>
         </div>
