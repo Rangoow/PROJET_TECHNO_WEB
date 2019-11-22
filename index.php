@@ -15,7 +15,7 @@
     }
 
     session_start();
-
+//var_dump($_SESSION);
 //TODO get page parameter ($_GET['page'] or $_POST['page']) and 
 //assign it into $page variable
 
@@ -63,8 +63,9 @@
     <link rel="stylesheet" href="css/main.css">
  
   <nav>
-  	<?php 
-  	include'Include/header.php';
+  	<?php
+		include'Action/signin_action.php';
+	  include'Include/header.php';
   	?>
          
 <!--         <div class="menuCategory">
@@ -124,8 +125,11 @@ switch($page){
 	
 	case"cartPage":
 	include'view/cartPage_view.php';
+	break;
 
-    break;
+	case "disconnect":
+	include'Action/disconnect_action.php';
+	break;
 	
 	default:
 	include'View/main_view.php';

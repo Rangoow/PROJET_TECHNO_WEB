@@ -162,3 +162,11 @@ label{
   padding-bottom: 15px;
   font-size: 20px;
 }
+
+#sessionInfo{
+  text-align: center;
+  color: white;
+  text-shadow:1px 1px 1px red;
+  padding-right: 15px;
+  font-size: 20px;
+}
