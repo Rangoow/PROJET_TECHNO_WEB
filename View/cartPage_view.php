@@ -1,5 +1,5 @@
 <?php
- $response= $bdd->query(" SELECT * FROM cart WHERE id =".$_SESSION['id']."") or die(mysql_error());
+ $response= $bdd->query(" SELECT * FROM cart WHERE id_client =".$_SESSION['id']."") or die(mysql_error());
  $results = $response->fetchAll();
 
 ?>
