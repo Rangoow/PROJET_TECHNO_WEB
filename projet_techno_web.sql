@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 08 Novembre 2019 à 20:43
+-- Généré le :  Ven 22 Novembre 2019 à 22:24
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -30,20 +30,31 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `id` int(11) DEFAULT NULL,
   `name` text,
   `quantity` int(11) DEFAULT NULL,
-  `unit_price` float DEFAULT NULL,
+  `unit_price` float NOT NULL DEFAULT '0',
   `image_produit` text,
-  UNIQUE KEY `id` (`id`),
-  UNIQUE KEY `id_2` (`id`)
+  `id_client` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `cart`
 --
 
-INSERT INTO `cart` (`id`, `name`, `quantity`, `unit_price`, `image_produit`) VALUES
-(2, 'Carolina Reaper', 0, 14.99, 'CarolinaReaper.jpg'),
-(3, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg'),
-(4, 'Butch Taylor', 1, 12.99, 'ButchTaylor.jpg');
+INSERT INTO `cart` (`id`, `name`, `quantity`, `unit_price`, `image_produit`, `id_client`) VALUES
+(0, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 5),
+(0, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg', 5),
+(0, 'Butch Taylor', 1, 12.99, 'ButchTaylor.jpg', 5),
+(0, 'Naga Viper', 1, 11.99, 'NagaViper.jpg', 4),
+(2, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 4),
+(2, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 4),
+(5, 'Naga Viper', 1, 11.99, 'NagaViper.jpg', 5),
+(2, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 5),
+(2, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 6),
+(2, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 6),
+(2, 'Carolina Reaper', 1, 14.99, 'CarolinaReaper.jpg', 6),
+(3, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg', 6),
+(3, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg', 6),
+(3, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg', 10),
+(3, 'Trinidad Moruga', 1, 13.99, 'TrinidadMoruga.jpg', 11);
 
 -- --------------------------------------------------------
 
@@ -118,19 +129,13 @@ CREATE TABLE IF NOT EXISTS `order_products` (
   `unit_price` double DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `image_produit` text CHARACTER SET utf8 NOT NULL,
+  `id_client` int(11) NOT NULL,
+  `name` text CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_order_product` (`order_id`),
   KEY `IDX_product_order` (`product_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
-
---
--- Contenu de la table `order_products`
---
-
-INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`, `unit_price`, `created_at`, `updated_at`) VALUES
-(2, 1, 1, 1, 14.99, '2019-10-11 14:21:26', '2019-10-11 14:21:26'),
-(3, 1, 2, 3, 13.99, '2019-10-11 14:21:26', '2019-10-11 14:21:26'),
-(4, 2, 1, 2, 12.99, '2019-10-11 14:21:26', '2019-10-11 14:21:26');
 
 -- --------------------------------------------------------
 
@@ -204,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   KEY `IDX_user_billing_adress` (`billing_adress_id`),
   KEY `IDX_user_delivery_adress` (`delivery_adress_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `users`
@@ -212,7 +217,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `billing_adress_id`, `delivery_adress_id`, `created_at`, `updated_at`) VALUES
 (2, 'Fred Eric', 'fred.eric@example.com', 'password', 1, 2, '2019-10-11 14:21:26', '2019-10-11 14:21:26'),
-(3, 'Frederic', 'frederic@example.com', 'password', 3, 4, '2019-10-11 14:21:26', '2019-10-11 14:21:26');
+(3, 'Frederic', 'frederic@example.com', 'password', 3, 4, '2019-10-11 14:21:26', '2019-10-11 14:21:26'),
+(4, 'a', 'a', 'a', NULL, NULL, '2019-11-22 17:00:15', '2019-11-22 17:00:15'),
+(5, 'z', 'z', 'z', NULL, NULL, '2019-11-22 17:19:18', '2019-11-22 17:19:18'),
+(9, 'd', 'd', 'd', NULL, NULL, '2019-11-22 22:00:26', '2019-11-22 22:00:26'),
+(10, 'x', 'x', 'x', NULL, NULL, '2019-11-22 22:03:24', '2019-11-22 22:03:24'),
+(11, 'y', 'y', 'y', NULL, NULL, '2019-11-22 22:08:23', '2019-11-22 22:08:23');
 
 -- --------------------------------------------------------
 
